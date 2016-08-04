@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                                       controllers.HomeController.index
+# An example controller showing how to use dependency injection
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                           controllers.Assets.versioned(path="/public", file: Asset)
+GET     /employees                              controllers.HomeController.employees
+POST    /employees                              controllers.HomeController.register
+POST    /employees/:id/delete                   controllers.HomeController.deleteEmployee(id: Long)
+GET     /getEmployee/:employeeID                controllers.HomeController.getEmployee(employeeID: String)
+
+
+POST    /login                                  controllers.HomeController.login
+POST    /register                               controllers.HomeController.register
+
+
+GET     /attendances                            controllers.AttendanceController.attendances
+POST    /checkIn                                controllers.AttendanceController.checkIn
+POST    /checkOut                               controllers.AttendanceController.checkOut
+#GET     /getAttendancesByManager/:employeeID    controllers.AttendanceController.getAttendancesByManager(employeeID: String)
+
+GET     /getAllRequestPermission                controllers.HomeController.getAllRequestPermission
+POST    /requestPermission                      controllers.HomeController.requestPermission
+POST    /updatePermission                       controllers.HomeController.updatePermission
