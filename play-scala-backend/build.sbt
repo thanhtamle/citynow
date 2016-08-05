@@ -16,7 +16,6 @@ libraryDependencies ++= Seq(
   "com.typesafe" %% "jse" % "1.1.2",
   "com.github.tminglei" %% "slick-pg" % "0.14.1",
   "com.github.tminglei" %% "slick-pg_date2" % "0.14.1",
-  "com.typesafe.play" %% "play-slick" % "2.0.2"
-)
+  "com.typesafe.play" %% "play-slick" % "2.0.2")
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"

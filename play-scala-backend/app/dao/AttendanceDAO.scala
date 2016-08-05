@@ -1,6 +1,6 @@
 package dao
 
-import models.{Attendance, Attendances}
+import  models.{Attendance, Attendances}
 import slick.driver.PostgresDriver.api._
 import slick.lifted.TableQuery
 import utils.DBManager

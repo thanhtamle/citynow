@@ -1,20 +1,15 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
-# ~~~~
+GET     /                           controllers.HomeController.index
 
-# An example controller showing a sample home page
-GET     /                                       controllers.HomeController.index
-# An example controller showing how to use dependency injection
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file                           controllers.Assets.versioned(path="/public", file: Asset)
-GET     /employees                              controllers.HomeController.employees
-POST    /employees                              controllers.HomeController.register
-POST    /employees/:id/delete                   controllers.HomeController.deleteEmployee(id: Long)
-GET     /getEmployee/:employeeID                controllers.HomeController.getEmployee(employeeID: String)
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /employees                              controllers.EmployeeController.employees
+POST    /employees                              controllers.EmployeeController.register
+POST    /employees/:id/delete                   controllers.EmployeeController.deleteEmployee(id: Long)
+GET     /getEmployee/:employeeID                controllers.EmployeeController.getEmployee(employeeID: String)
 
 
-POST    /login                                  controllers.HomeController.login
-POST    /register                               controllers.HomeController.register
+POST    /login                                  controllers.EmployeeController.login
+POST    /register                               controllers.EmployeeController.register
 
 
 GET     /attendances                            controllers.AttendanceController.attendances
@@ -22,6 +17,6 @@ POST    /checkIn                                controllers.AttendanceController
 POST    /checkOut                               controllers.AttendanceController.checkOut
 #GET     /getAttendancesByManager/:employeeID    controllers.AttendanceController.getAttendancesByManager(employeeID: String)
 
-GET     /getAllRequestPermission                controllers.HomeController.getAllRequestPermission
-POST    /requestPermission                      controllers.HomeController.requestPermission
-POST    /updatePermission                       controllers.HomeController.updatePermission
+GET     /getAllRequestPermission                controllers.EmployeeController.getAllRequestPermission
+POST    /requestPermission                      controllers.EmployeeController.requestPermission
+POST    /updatePermission                       controllers.EmployeeController.updatePermission

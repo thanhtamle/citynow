@@ -14,9 +14,9 @@ class AttendanceController @Inject() extends Controller {
   implicit val employeeWrites = Json.writes[Employee]
   implicit val employeeReads = Json.reads[Employee]
 
-  def index = Action {
-    Redirect(routes.AttendanceController.attendances)
-  }
+//  def index = Action {
+//    Redirect(routes.AttendanceController.attendances)
+//  }
 
   def attendances = Action {
     Ok(Json.toJson(AttendanceDAO.all()))
