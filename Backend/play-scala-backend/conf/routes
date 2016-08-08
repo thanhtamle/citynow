@@ -1,0 +1,23 @@
+GET     /                                       controllers.HomeController.index
+GET     /javascriptRoutes                       controllers.HomeController.javascriptRoutes
+
+GET     /assets/*file                           controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /employees                              controllers.EmployeeController.employees
+POST    /employees                              controllers.EmployeeController.register
+POST    /employees/:id/delete                   controllers.EmployeeController.deleteEmployee(id: Long)
+GET     /getEmployee/:employeeID                controllers.EmployeeController.getEmployee(employeeID: String)
+
+
+POST    /login                                  controllers.EmployeeController.login
+POST    /register                               controllers.EmployeeController.register
+
+
+GET     /attendances                            controllers.AttendanceController.attendances
+POST    /checkIn                                controllers.AttendanceController.checkIn
+POST    /checkOut                               controllers.AttendanceController.checkOut
+#GET    /getAttendancesByManager/:employeeID    controllers.AttendanceController.getAttendancesByManager(employeeID: String)
+
+GET     /getAllRequestPermission                controllers.PermissionController.getAllRequestPermission
+POST    /requestPermission                      controllers.PermissionController.requestPermission
+POST    /updatePermission                       controllers.PermissionController.updatePermission

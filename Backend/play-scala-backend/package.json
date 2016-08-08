@@ -1,0 +1,46 @@
+{
+  "name": "play-react-seed",
+  "version": "1.0.0",
+  "description": "Play react js seed project with server side rendering",
+  "main": "app/assets/javascripts/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lib": "browserify -r classnames -r immutable -r keymirror -r object-assign -r react -r react-dom -r react-bootstrap -r react-router -r flux -r superagent -t [envify --NODE_ENV production] | uglifyjs -cm > app/assets/javascripts/lib.js",
+    "start": "watchify -t [babelify] -o app/assets/javascripts/bundle.js -v -d -x classnames -x immutable -x keymirror -x object-assign -x react -x react-dom -x react-bootstrap -x react-router -x flux -x superagent app/assets/javascripts/app.js",
+    "build": "browserify -x classnames -x immutable -x keymirror -x object-assign -x react -x react/addons -x react-router -x flux -x superagent -t [envify --NODE_ENV production] -t [babelify --stage 0] | uglifyjs -cm > app/assets/javascripts/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TyBQ",
+  "license": "CityNow",
+  "dependencies": {
+    "classnames": "^2.1.3",
+    "flux": "*",
+    "immutable": "^3.7.4",
+    "keymirror": "~0.1.0",
+    "moment": "^2.13.0",
+    "object-assign": "^1.0.0",
+    "rc-datepicker": "^5.0.0-beta2",
+    "react": "*",
+    "react-bootstrap": "^0.29.4",
+    "react-bootstrap-datetimepicker": "0.0.22",
+    "react-date-field": "^0.2.3",
+    "react-datepicker": "^0.27.0",
+    "react-dom": "^0.14.1",
+    "react-router": "^2.6.1",
+    "react-widgets": "^3.3.2",
+    "superagent": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel": "*",
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "*",
+    "browserify": "*",
+    "envify": "^3.4.0",
+    "uglify-js": "^2.4.24",
+    "watchify": "*"
+  }
+}

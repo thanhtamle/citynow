@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="MenuCell" customModule="Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Setting" translatesAutoresizingMaskIntoConstraints="NO" id="gb9-Dm-Bl7">
+                        <rect key="frame" x="10" y="0.0" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="L99-G2-N7H"/>
+                            <constraint firstAttribute="height" constant="50" id="rJv-V8-LIg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT1-aX-H0u">
+                        <rect key="frame" x="70" y="0.0" width="250" height="50"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gb9-Dm-Bl7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1K5-kN-aLu"/>
+                    <constraint firstItem="cT1-aX-H0u" firstAttribute="leading" secondItem="gb9-Dm-Bl7" secondAttribute="trailing" constant="10" id="7Im-hg-y60"/>
+                    <constraint firstItem="cT1-aX-H0u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AS6-Zo-ew8"/>
+                    <constraint firstAttribute="bottom" secondItem="cT1-aX-H0u" secondAttribute="bottom" id="pbW-M2-pp9"/>
+                    <constraint firstItem="gb9-Dm-Bl7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="q8t-uG-h27"/>
+                    <constraint firstAttribute="trailing" secondItem="cT1-aX-H0u" secondAttribute="trailing" id="tVf-jy-GcA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="gb9-Dm-Bl7" id="ABl-c1-KQr"/>
+                <outlet property="name" destination="cT1-aX-H0u" id="c0c-u6-sFC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Setting" width="24" height="24"/>
+    </resources>
+</document>

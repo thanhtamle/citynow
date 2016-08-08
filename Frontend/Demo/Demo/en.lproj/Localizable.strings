@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  Demo
+
+  Created by lethanhtam on 6/25/16.
+  Copyright (c) 2016 Thanh-Tam Le. All rights reserved.
+*/
+
+"settings" = "Settings";
+"choose_your_language" = "Choose your language";
+"help" = "Help";
+"about" = "About";
+"rate_app" = "Rate and review";
+"exit_app" = "Exit";
+"text_about" = "- Version: 1.0
+- Developer: Thanh Tam Le - University of Science Ho Chi Minh City
+- Contact us if you have any feedback with email: lethanhtam1604@gmail.com
+- Copyright ©2016 Thanh Tam Le";
+
+"home" = "CityNow";
+"camera" = "Camera";
+"account" = "Account";
+"account_info" = "Account info";
+"arrival" = "Arrival";
+"departure" = "Departure";
+"login" = "Login";
+"logout" = "Logout";
+"register" = "Register";
+"no_account_yet_create_one" = "No account yet? Create one";
+"already_a_member_login" = "Already a member? Login";
+"exit" = "Cancel";
+"email" = "Email";
+"password" = "Password";
+"request_permission" = "Request permission";
+"attendance_manager" = "Attendance manager";
+"login_your_account" = "Logging your account...";
+"register_new_account" = "Registering new account...";
+"employeeID" = "EmployeeID";
+"message" = "Message";
+"login_failed_please_enter_your_account_again" = "Login failed. Please enter your account again";
+"request_error_please_try_again" = "Request error. Please try again";
+"ok" = "OK";
+"manager_id" = "Manager ID";
+"manager_name" = "Manager Name";
+"employee_id" = "Employee ID";
+"employee_name" = "Employee name";
+"employee_email" = "Employee email";
+"arrival_time" = "Arrival time";
+"departure_time" = "Departure time";
+"admin" = "Admin";
+"granted_permission" = "Granted permission";
+"sent_request_permission_please_wait_for_admin_respone" = "Sent request permission. Please wait for admin respone";
+"name" = "Name";
+"request_permission_manager" = "Request permission manager";
+"employee_does_not_exist" = "Employee does not exist";
+"the_device_account_is_not_admin_please_login_another_account_or_request_permission" = "The device account is not admin. Please login another account or request permission";
+"check_in_successful" = "Checkin successful";
+"check_out_successful" = "Checkout successful";
+"choose_language" = "Choose language";
+"grant_permission" = "Grant permission";
+
+
+

@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  Demo
+
+  Created by lethanhtam on 6/25/16.
+  Copyright (c) 2016 Thanh-Tam Le. All rights reserved.
+*/
+
+"settings" = "Cài đặt";
+"choose_your_language" = "Chọn ngôn ngữ";
+"help" = "Giới thiệu";
+"about" = "Thông tin tác giả";
+"rate_app" = "Đánh giá ứng dụng";
+"exit_app" = "Đóng ứng dụng";
+"text_about" = "- Phiên bản: 1.0
+- Nhà phát triển: Lê Thành Tâm - Đại học Khoa Học Tự Nhiên TP.HCM
+- Liên lạc với chúng tôi nếu bạn có bất kỳ phản hồi qua email: lethanhtam1604@gmail.com
+- Bản quyền tác giả ©2016 Lê Thành Tâm";
+
+"home" = "CityNow";
+"camera" = "Máy ảnh";
+"account" = "Tải khoản";
+"account_info" = "Thông tin tài khoản";
+"arrival" = "Đến";
+"departure" = "Về";
+"login" = "Đăng nhập";
+"logout" = "Đăng xuất";
+"register" = "Đăng ký";
+"no_account_yet_create_one" = "Chưa có tài khoản? Đăng ký";
+"already_a_member_login" = "Đã có tài khoản? Đăng nhập";
+"exit" = "Thoát";
+"email" = "Email";
+"password" = "Mật khẩu";
+"request_permission" = "Xin cấp quyền";
+"attendance_manager" = "Quản lý thời gian làm việc";
+"login_your_account" = "Đăng nhập tài khoản...";
+"register_new_account" = "Đăng ký tài khoản...";
+"employeeID" = "Mã nhân viên";
+"message" = "Thông báo";
+"login_failed_please_enter_your_account_again" = "Đăng nhập thất bại. Bạn vui lòng kiểm tra lại tài khoản";
+"request_error_please_try_again" = "Lỗi. Vui lòng thử lại";
+"ok" = "Đồng ý";
+"manager_id" = "Mã người quản lý";
+"manager_name" = "Tên người quản lý";
+"employee_id" = "Mã nhân viên";
+"employee_name" = "Tên nhân viên";
+"employee_email" = "Email nhân viên";
+"arrival_time" = "Thời gian đi";
+"departure_time" = "Thời gian đến";
+"admin" = "Quản lý";
+"granted_permission" = "Đã được cấp quyền";
+"sent_request_permission_please_wait_for_admin_respone" = "Đã gửi yêu cầu cấp quyền. Vui lòng chờ người quản lý phản hồi";
+"name" = "Tên";
+"request_permission_manager" = "Quản lý cấp quyền";
+"employee_does_not_exist" = "Nhân viên không tồn tại";
+"the_device_account_is_not_admin_please_login_another_account_or_request_permission" = "Tài khoản máy không phải là người quản lý. Vui lòng đăng nhập tài khoản khác hoặc xin cấp quyền";
+"check_in_successful" = "Checkin thành công";
+"check_out_successful" = "Checkout thành công";
+"choose_language" = "Chọn ngôn ngữ";
+"grant_permission" = "Cấp quyền";
+
+
+
