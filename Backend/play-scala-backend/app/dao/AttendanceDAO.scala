@@ -1,6 +1,6 @@
 package dao
 
-import  models.{Attendance, Attendances}
+import models.{Attendance, Attendances}
 import slick.driver.PostgresDriver.api._
 import slick.lifted.TableQuery
 import utils.DBManager
@@ -36,7 +36,9 @@ object AttendanceDAO {
   def saveDepartureTime(attendance: Attendance): Boolean = {
     var item = getAttendanceToCheckInCheckout(attendance.employeeID, attendance.managerEmployeeID)
     if (item != null) {
-      DBManager.run((attendances returning attendances.map(_.id)).insertOrUpdate(item))
+      val q = for {c <- attendances if c.employeeID === attendance.employeeID if c.managerEmployeeID === attendance.managerEmployeeID} yield (c.departureTime, c.finish)
+      val updateAction = q.update(attendance.departureTime, attendance.finish)
+      DBManager.run(updateAction)
       return true
     }
     return false

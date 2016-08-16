@@ -28,7 +28,9 @@ object PermissionDAO {
 
   def addPermission(permission: Permission): Boolean = {
     if (isExistPermission(permission.employeeID) == null) {
-      DBManager.run((permissions returning permissions.map(_.id)).insertOrUpdate(permission))
+      val insertQuery = permissions returning permissions.map(_.id) into ((item, id) => item.copy(id = id))
+      val action = insertQuery += permission
+      DBManager.run(action)
       return true
     }
     return false

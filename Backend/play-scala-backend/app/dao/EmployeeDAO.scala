@@ -17,7 +17,9 @@ object EmployeeDAO {
 
   def register(employee: Employee): Boolean = {
     if (isExistEmployee(employee.employeeID) == null) {
-      DBManager.run((employees returning employees.map(_.id)).insertOrUpdate(employee))
+      val insertQuery = employees returning employees.map(_.id) into ((item, id) => item.copy(id = id))
+      val action = insertQuery += employee
+      DBManager.run(action)
       return true
     }
     return false
