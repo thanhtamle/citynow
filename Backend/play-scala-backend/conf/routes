@@ -16,7 +16,7 @@ POST    /register                               controllers.EmployeeController.r
 GET     /attendances                            controllers.AttendanceController.attendances
 POST    /checkIn                                controllers.AttendanceController.checkIn
 POST    /checkOut                               controllers.AttendanceController.checkOut
-#GET    /getAttendancesByManager/:employeeID    controllers.AttendanceController.getAttendancesByManager(employeeID: String)
+GET     /getAttendancesByManager/:employeeID    controllers.AttendanceController.getAttendancesByManager(employeeID: String)
 
 GET     /getAllRequestPermission                controllers.PermissionController.getAllRequestPermission
 POST    /requestPermission                      controllers.PermissionController.requestPermission

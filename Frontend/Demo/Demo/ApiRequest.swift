@@ -10,7 +10,7 @@ import UIKit
 
 class ApiRequest {
     
-    private let API_HOST = "http://localhost:9000"
+    private let API_HOST = "http://54.249.94.26:9000"
     private var token: String!
     
     func getLoadingMessage () -> String { return ""}

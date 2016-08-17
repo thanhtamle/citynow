@@ -46,7 +46,8 @@ class LoginApiRequest: ApiRequest{
                         employeeName: (object!.objectForKey("employeeName") as? String)!,
                         employeeEmail: (object!.objectForKey("employeeEmail") as? String)!,
                         admin: (object!.objectForKey("admin") as? Bool)!,
-                        permission : (object!.objectForKey("permission") as? Bool)!
+                        permission : (object!.objectForKey("permission") as? Bool)!,
+                        deleteFlag : (object!.objectForKey("deleteFlag") as? Bool)!
                     )
                     completion(success: true, data: result, message: nil)
                 } else {

@@ -43,4 +43,10 @@ object AttendanceDAO {
     }
     return false
   }
+
+  def getAttendanceListByManager(employeeID: String): Seq[Attendance] = {
+    var query = attendances.filter(_.managerEmployeeID === employeeID).result
+    var result = DBManager.run(query)
+    return result
+  }
 }

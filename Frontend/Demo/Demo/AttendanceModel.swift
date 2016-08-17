@@ -16,14 +16,16 @@ class AttendanceModel {
     var departureTime: String!
     var finish: Bool!
     var managerEmployeeID: String!
+    var deleteFlag: Bool!
     
-    init(id: Int, employeeID: String, arrivalTime: String, departureTime: String, finish: Bool, managerEmployeeID: String) {
+    init(id: Int, employeeID: String, arrivalTime: String, departureTime: String, finish: Bool, managerEmployeeID: String, deleteFlag: Bool) {
         self.id = id
         self.employeeID = employeeID
         self.arrivalTime = arrivalTime
         self.departureTime = departureTime
         self.finish = finish
         self.managerEmployeeID = managerEmployeeID
+        self.deleteFlag = deleteFlag
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -33,7 +35,8 @@ class AttendanceModel {
         let departureTime = aDecoder.decodeObjectForKey("departureTime") as! String
         let finish = aDecoder.decodeObjectForKey("finish") as! Bool
         let managerEmployeeID = aDecoder.decodeObjectForKey("managerEmployeeID") as! String
-        self.init(id: id, employeeID: employeeID, arrivalTime: arrivalTime, departureTime: departureTime, finish: finish, managerEmployeeID: managerEmployeeID)
+        let deleteFlag = aDecoder.decodeObjectForKey("deleteFlag") as! Bool
+        self.init(id: id, employeeID: employeeID, arrivalTime: arrivalTime, departureTime: departureTime, finish: finish, managerEmployeeID: managerEmployeeID, deleteFlag: deleteFlag)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -43,6 +46,6 @@ class AttendanceModel {
         aCoder.encodeObject(departureTime, forKey: "departureTime")
         aCoder.encodeObject(finish, forKey: "finish")
         aCoder.encodeObject(managerEmployeeID, forKey: "managerEmployeeID")
-
+        aCoder.encodeBool(deleteFlag, forKey: "deleteFlag")
     }
 }

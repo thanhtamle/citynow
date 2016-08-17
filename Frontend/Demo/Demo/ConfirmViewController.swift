@@ -92,7 +92,7 @@ class ConfirmViewController: UIViewController {
         
         let time: String = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .MediumStyle)
 
-        let attendanceModel: AttendanceModel = AttendanceModel(id: 1, employeeID: qrCodeValue, arrivalTime: time, departureTime: "", finish: false, managerEmployeeID: loginSuccessResopneModel.employeeID)
+        let attendanceModel: AttendanceModel = AttendanceModel(id: 1, employeeID: qrCodeValue, arrivalTime: time, departureTime: "", finish: false, managerEmployeeID: loginSuccessResopneModel.employeeID, deleteFlag: false)
         
         let checkinApiRequest: CheckinApiRequest = CheckinApiRequest()
         checkinApiRequest.setAttendanceModel(attendanceModel)
@@ -116,7 +116,7 @@ class ConfirmViewController: UIViewController {
         
         let time: String = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .MediumStyle)
         
-        let attendanceModel: AttendanceModel = AttendanceModel(id: 1, employeeID: qrCodeValue, arrivalTime: "", departureTime: time, finish: true, managerEmployeeID: loginSuccessResopneModel.employeeID)
+        let attendanceModel: AttendanceModel = AttendanceModel(id: 1, employeeID: qrCodeValue, arrivalTime: "", departureTime: time, finish: true, managerEmployeeID: loginSuccessResopneModel.employeeID, deleteFlag: true)
         
         let checkoutApiRequest: CheckoutApiRequest = CheckoutApiRequest()
         checkoutApiRequest.setAttendanceModel(attendanceModel)

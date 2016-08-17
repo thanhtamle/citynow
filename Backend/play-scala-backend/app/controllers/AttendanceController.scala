@@ -14,9 +14,9 @@ class AttendanceController @Inject() extends Controller {
   implicit val employeeWrites = Json.writes[Employee]
   implicit val employeeReads = Json.reads[Employee]
 
-//  def index = Action {
-//    Redirect(routes.AttendanceController.attendances)
-//  }
+  //  def index = Action {
+  //    Redirect(routes.AttendanceController.attendances)
+  //  }
 
   def attendances = Action {
     Ok(Json.toJson(AttendanceDAO.all()))
@@ -29,7 +29,7 @@ class AttendanceController @Inject() extends Controller {
         BadRequest(Json.obj("status" -> "Error", "message" -> JsError.toFlatJson(errors)))
       },
       attendance => {
-        if(AttendanceDAO.saveArrivalTime(attendance) == true)
+        if (AttendanceDAO.saveArrivalTime(attendance) == true)
           Ok(Json.toJson(attendance))
         else
           BadRequest(Json.obj("status" -> "Error"))
@@ -44,21 +44,21 @@ class AttendanceController @Inject() extends Controller {
         BadRequest(Json.obj("status" -> "Error", "message" -> JsError.toFlatJson(errors)))
       },
       attendance => {
-        if(AttendanceDAO.saveDepartureTime(attendance) == true)
+        if (AttendanceDAO.saveDepartureTime(attendance) == true)
           Ok(Json.toJson(attendance))
         else
           BadRequest(Json.obj("status" -> "Error"))
       }
     )
   }
-//
-//  def getAttendancesByManager(employeeID: String) = Action {
-//        Ok(Json.toJson(Attendance.getAttendanceListByManager(employeeID)))
-//  }
-//
-//  def deleteAttendance(id: Long) = Action {
-//    Attendance.delete(id)
-//    Redirect(routes.AttendanceController.attendances)
-//  }
+
+  def getAttendancesByManager(employeeID: String) = Action {
+    Ok(Json.toJson(AttendanceDAO.getAttendanceListByManager(employeeID)))
+  }
+
+  //  def deleteAttendance(id: Long) = Action {
+  //    Attendance.delete(id)
+  //    Redirect(routes.AttendanceController.attendances)
+  //  }
 
 }

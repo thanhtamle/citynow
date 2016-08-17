@@ -16,8 +16,9 @@ class LoginSuccessResponseModel: NSObject, NSCoding {
     var employeeEmail: String!
     var admin: Bool!
     var permission: Bool!
+    var deleteFlag: Bool!
     
-    init(id: Int, employeeID: String, employeePassword: String, employeeName: String, employeeEmail: String, admin: Bool, permission: Bool) {
+    init(id: Int, employeeID: String, employeePassword: String, employeeName: String, employeeEmail: String, admin: Bool, permission: Bool, deleteFlag: Bool) {
         self.id = id
         self.employeeID = employeeID
         self.employeePassword = employeePassword
@@ -25,6 +26,7 @@ class LoginSuccessResponseModel: NSObject, NSCoding {
         self.employeeEmail = employeeEmail
         self.admin = admin
         self.permission = permission
+        self.deleteFlag = deleteFlag
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -35,8 +37,9 @@ class LoginSuccessResponseModel: NSObject, NSCoding {
         let employeeEmail = aDecoder.decodeObjectForKey("employeeEmail") as! String
         let admin = aDecoder.decodeObjectForKey("admin") as! Bool
         let permission = aDecoder.decodeObjectForKey("permission") as! Bool
+        let deleteFlag = aDecoder.decodeObjectForKey("deleteFlag") as! Bool
         
-        self.init(id: id, employeeID: employeeID, employeePassword: employeePassword,employeeName: employeeName, employeeEmail: employeeEmail, admin: admin, permission: permission )
+        self.init(id: id, employeeID: employeeID, employeePassword: employeePassword,employeeName: employeeName, employeeEmail: employeeEmail, admin: admin, permission: permission, deleteFlag: deleteFlag)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -47,5 +50,6 @@ class LoginSuccessResponseModel: NSObject, NSCoding {
         aCoder.encodeObject(employeeEmail, forKey: "employeeEmail")
         aCoder.encodeObject(admin, forKey: "admin")
         aCoder.encodeObject(permission, forKey: "permission")
+        aCoder.encodeBool(deleteFlag, forKey: "deleteFlag")
     }
 }
