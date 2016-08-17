@@ -44,7 +44,8 @@ class GetPermissionRequestApiRequest: ApiRequest{
                             let item: PermissionModel = PermissionModel(
                                 id: (itemDict.valueForKey("id")?.integerValue)!,
                                 employeeID:(itemDict.valueForKey("employeeID") as? String)!,
-                                isPermission : (itemDict.objectForKey("isPermission") as? Bool)!
+                                isPermission : (itemDict.valueForKey("isPermission") as? Bool)!,
+                                deleteFlag: (itemDict.valueForKey("deleteFlag") as? Bool)!
                             )
                             results.append(item)
                         }

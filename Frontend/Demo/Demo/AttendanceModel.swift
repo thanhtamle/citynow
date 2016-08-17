@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttendanceModel {
+class AttendanceModel: NSObject, NSCoding{
     
     var id: Int!
     var employeeID: String!
@@ -33,9 +33,9 @@ class AttendanceModel {
         let employeeID = aDecoder.decodeObjectForKey("employeeID") as! String
         let arrivalTime = aDecoder.decodeObjectForKey("arrivalTime") as! String
         let departureTime = aDecoder.decodeObjectForKey("departureTime") as! String
-        let finish = aDecoder.decodeObjectForKey("finish") as! Bool
+        let finish = aDecoder.decodeBoolForKey("finish")
         let managerEmployeeID = aDecoder.decodeObjectForKey("managerEmployeeID") as! String
-        let deleteFlag = aDecoder.decodeObjectForKey("deleteFlag") as! Bool
+        let deleteFlag = aDecoder.decodeBoolForKey("deleteFlag")
         self.init(id: id, employeeID: employeeID, arrivalTime: arrivalTime, departureTime: departureTime, finish: finish, managerEmployeeID: managerEmployeeID, deleteFlag: deleteFlag)
     }
     
@@ -44,7 +44,7 @@ class AttendanceModel {
         aCoder.encodeObject(employeeID, forKey: "employeeID")
         aCoder.encodeObject(arrivalTime, forKey: "arrivalTime")
         aCoder.encodeObject(departureTime, forKey: "departureTime")
-        aCoder.encodeObject(finish, forKey: "finish")
+        aCoder.encodeBool(finish, forKey: "finish")
         aCoder.encodeObject(managerEmployeeID, forKey: "managerEmployeeID")
         aCoder.encodeBool(deleteFlag, forKey: "deleteFlag")
     }

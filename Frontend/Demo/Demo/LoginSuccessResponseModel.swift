@@ -35,9 +35,9 @@ class LoginSuccessResponseModel: NSObject, NSCoding {
         let employeePassword = aDecoder.decodeObjectForKey("employeePassword") as! String
         let employeeName = aDecoder.decodeObjectForKey("employeeName") as! String
         let employeeEmail = aDecoder.decodeObjectForKey("employeeEmail") as! String
-        let admin = aDecoder.decodeObjectForKey("admin") as! Bool
-        let permission = aDecoder.decodeObjectForKey("permission") as! Bool
-        let deleteFlag = aDecoder.decodeObjectForKey("deleteFlag") as! Bool
+        let admin = aDecoder.decodeBoolForKey("admin")
+        let permission = aDecoder.decodeBoolForKey("permission")
+        let deleteFlag = aDecoder.decodeBoolForKey("deleteFlag")
         
         self.init(id: id, employeeID: employeeID, employeePassword: employeePassword,employeeName: employeeName, employeeEmail: employeeEmail, admin: admin, permission: permission, deleteFlag: deleteFlag)
     }
@@ -48,8 +48,8 @@ class LoginSuccessResponseModel: NSObject, NSCoding {
         aCoder.encodeObject(employeePassword, forKey: "employeePassword")
         aCoder.encodeObject(employeeName, forKey: "employeeName")
         aCoder.encodeObject(employeeEmail, forKey: "employeeEmail")
-        aCoder.encodeObject(admin, forKey: "admin")
-        aCoder.encodeObject(permission, forKey: "permission")
+        aCoder.encodeBool(admin, forKey: "admin")
+        aCoder.encodeBool(permission, forKey: "permission")
         aCoder.encodeBool(deleteFlag, forKey: "deleteFlag")
     }
 }

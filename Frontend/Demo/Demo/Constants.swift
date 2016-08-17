@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let MAIN_COLOR = "0x2196F3"
+let MAIN_COLOR = "0x8FC749"
 let MAIN_COLOR_LIGHT = "0x64B5F6"
 let MENU_COLOR = "0xCCCCCC"
 let MAIN_BACKGROUND_COLOR = "0x4CAF50"

@@ -13,23 +13,27 @@ class PermissionModel {
     var id: Int!
     var employeeID: String!
     var isPermission: Bool!
+    var deleteFlag: Bool!
     
-    init(id: Int, employeeID: String, isPermission: Bool) {
+    init(id: Int, employeeID: String, isPermission: Bool, deleteFlag: Bool) {
         self.id = id
         self.employeeID = employeeID
         self.isPermission = isPermission
+        self.deleteFlag = deleteFlag
     }
     
     required convenience init(coder aDecoder: NSCoder) {
         let id = aDecoder.decodeIntegerForKey("id")
         let employeeID = aDecoder.decodeObjectForKey("employeeID") as! String
-        let isPermission = aDecoder.decodeObjectForKey("isPermission") as! Bool
-        self.init(id: id, employeeID: employeeID, isPermission: isPermission)
+        let isPermission = aDecoder.decodeBoolForKey("isPermission")
+        let deleteFlag = aDecoder.decodeBoolForKey("deleteFlag")
+        self.init(id: id, employeeID: employeeID, isPermission: isPermission, deleteFlag: deleteFlag)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeInteger(id, forKey: "id")
         aCoder.encodeObject(employeeID, forKey: "employeeID")
-        aCoder.encodeObject(isPermission, forKey: "isPermission")
+        aCoder.encodeBool(isPermission, forKey: "isPermission")
+        aCoder.encodeBool(deleteFlag, forKey: "deleteFlag")
     }
 }

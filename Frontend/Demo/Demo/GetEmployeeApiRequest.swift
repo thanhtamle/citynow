@@ -39,13 +39,13 @@ class GetEmployeeApiRequest: ApiRequest{
                 if success {
                     let result: LoginSuccessResponseModel = LoginSuccessResponseModel(
                         id: (object!.valueForKey("id")?.integerValue)!,
-                        employeeID: (object!.objectForKey("employeeID") as? String)!,
-                        employeePassword: (object!.objectForKey("employeePassword") as? String)!,
-                        employeeName: (object!.objectForKey("employeeName") as? String)!,
-                        employeeEmail: (object!.objectForKey("employeeEmail") as? String)!,
-                        admin: (object!.objectForKey("admin") as? Bool)!,
-                        permission : (object!.objectForKey("permission") as? Bool)!,
-                        deleteFlag: (object!.valueForKey("deletFlag") as? Bool)!
+                        employeeID: (object!.valueForKey("employeeID") as? String)!,
+                        employeePassword: (object!.valueForKey("employeePassword") as? String)!,
+                        employeeName: (object!.valueForKey("employeeName") as? String)!,
+                        employeeEmail: (object!.valueForKey("employeeEmail") as? String)!,
+                        admin: (object!.valueForKey("admin") as? Bool)!,
+                        permission : (object!.valueForKey("permission") as? Bool)!,
+                        deleteFlag: (object!.valueForKey("deleteFlag") as? Bool)!
                     )
                     completion(success: true, data: result, message: nil)
                 } else {

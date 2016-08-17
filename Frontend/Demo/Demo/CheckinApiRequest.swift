@@ -33,7 +33,7 @@ class CheckinApiRequest: ApiRequest{
     }
     
     func checkIn(completion: (success: Bool, data: AnyObject?, message: String?) -> ()) {
-        let attendanceObject = ["id": attendanceModel.id, "employeeID": attendanceModel.employeeID, "arrivalTime": attendanceModel.arrivalTime, "departureTime": attendanceModel.departureTime, "finish": attendanceModel.finish, "managerEmployeeID": attendanceModel.managerEmployeeID]
+        let attendanceObject = ["id": attendanceModel.id, "employeeID": attendanceModel.employeeID, "arrivalTime": attendanceModel.arrivalTime, "departureTime": attendanceModel.departureTime, "finish": attendanceModel.finish, "managerEmployeeID": attendanceModel.managerEmployeeID, "deleteFlag": attendanceModel.deleteFlag]
         
         request(clientURLRequest(attendanceObject as? Dictionary<String, AnyObject>)) { (success, object) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in

@@ -41,9 +41,9 @@ class GetAttendanceManagerApiRequest: ApiRequest{
                                 employeeID:(itemDict.valueForKey("employeeID") as? String)!,
                                 arrivalTime:(itemDict.valueForKey("arrivalTime") as? String)!,
                                 departureTime:(itemDict.valueForKey("departureTime") as? String)!,
-                                finish : (itemDict.objectForKey("finish") as? Bool)!,
+                                finish : (itemDict.valueForKey("finish") as? Bool)!,
                                 managerEmployeeID:(itemDict.valueForKey("managerEmployeeID") as? String)!,
-                                deleteFlag:(itemDict.valueForKey("deletFlag") as? Bool)!
+                                deleteFlag:(itemDict.valueForKey("deleteFlag") as? Bool)!
                             )
 
                             results.append(item)

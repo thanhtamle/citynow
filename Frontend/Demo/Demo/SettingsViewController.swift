@@ -103,7 +103,7 @@ class SettingsViewController: UIViewController, LoginControllerDelegate {
             Utils.showMessage("granted_permission".localized(), controller: self)
         }
         else {
-            let permissionModel: PermissionModel = PermissionModel(id: 1, employeeID: loginSuccessResopneModel.employeeID, isPermission: false)
+            let permissionModel: PermissionModel = PermissionModel(id: 1, employeeID: loginSuccessResopneModel.employeeID, isPermission: false, deleteFlag: false)
             
             requestPermissionApiRequest.setPermissionModel(permissionModel)
             requestPermissionApiRequest.requestPermission() { (success, data, message) in
