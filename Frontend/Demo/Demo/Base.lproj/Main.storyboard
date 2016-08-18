@@ -11,6 +11,7 @@
         <scene sceneID="nDs-nW-Orp">
             <objects>
                 <navigationController id="5Xl-u1-E4L" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hir-V9-0N6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -111,6 +112,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cameraView" destination="4tO-mk-OcH" id="L3H-tK-DE7"/>
@@ -174,6 +176,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="permissionManagerTableView" destination="KaC-tp-Dcf" id="64z-oy-V3o"/>
@@ -345,6 +348,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="accountManagerView" destination="JYC-Vo-EHl" id="2rQ-Ra-Ju1"/>
@@ -404,6 +408,7 @@
                             <constraint firstItem="8T8-Zd-j3l" firstAttribute="top" secondItem="wgP-wC-n5z" secondAttribute="bottom" id="yUy-DW-SKf"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="aboutTV" destination="0uy-ua-ayp" id="iop-Qy-h1r"/>
@@ -511,6 +516,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="employeeIDLabel" destination="Tyf-7K-tlz" id="pyr-dy-FVY"/>
@@ -595,6 +601,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="attendanceManagerTableView" destination="Qob-RV-30s" id="Mx1-fF-efv"/>
@@ -751,6 +758,7 @@
                             <constraint firstItem="zfM-ll-zr7" firstAttribute="top" secondItem="H4E-cb-rpS" secondAttribute="bottom" id="o7O-jE-LaH"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="arrivalBtn" destination="dkB-yG-jAs" id="8zz-jW-Mjb"/>
