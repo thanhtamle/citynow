@@ -18,6 +18,7 @@ class HomeController @Inject()(actorSystem: ActorSystem, ws: WSClient) extends C
     Ok(
       JavaScriptReverseRouter("jsRoutes")(
         routes.javascript.EmployeeController.employees,
+        routes.javascript.EmployeeController.login,
         routes.javascript.AttendanceController.attendances,
         routes.javascript.PermissionController.getAllRequestPermission
       )

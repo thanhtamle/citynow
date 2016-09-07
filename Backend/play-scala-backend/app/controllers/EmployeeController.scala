@@ -50,7 +50,7 @@ class EmployeeController @Inject() extends Controller {
         if (employee != null)
           Ok(Json.toJson(employee))
         else
-          BadRequest(Json.obj("status" -> "Error"))
+          BadRequest(Json.obj("status" -> "Username or Password is not correct!"))
       }
     )
   }
