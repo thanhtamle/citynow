@@ -4,8 +4,8 @@ import javax.inject._
 
 import dao.{EmployeeDAO, PermissionDAO}
 import models._
-import play.api.libs.json.{JsError, Json}
 import play.api.mvc._
+import play.api.libs.json._
 
 @Singleton
 class EmployeeController @Inject() extends Controller {
@@ -15,6 +15,14 @@ class EmployeeController @Inject() extends Controller {
   implicit val LoginModelReads = Json.reads[LoginModel]
   implicit val permissionWrites = Json.writes[Permission]
   implicit val permissionReads = Json.reads[Permission]
+
+  implicit val ResponseWrites = new Writes[Response] {
+    def writes(response: Response) = Json.obj(
+      "success" -> response.success,
+      "message" -> response.message,
+      "data" -> response.data
+    )
+  }
 
   def employees = Action {
     Ok(Json.toJson(EmployeeDAO.all()))
@@ -43,14 +51,14 @@ class EmployeeController @Inject() extends Controller {
     val e = request.body.validate[LoginModel]
     e.fold(
       errors => {
-        BadRequest(Json.obj("status" -> "Error", "message" -> JsError.toFlatJson(errors)))
+        BadRequest(Json.toJson(new Response(0, "Login error!", null)))
       },
       loginModel => {
-        var employee: Employee = EmployeeDAO.login(loginModel)
+        val employee: Employee = EmployeeDAO.login(loginModel)
         if (employee != null)
-          Ok(Json.toJson(employee))
+          Ok(Json.toJson(new Response(1, "Login successfully!", null)))
         else
-          BadRequest(Json.obj("status" -> "Username or Password is not correct!"))
+          BadRequest(Json.toJson(new Response(0, "Username or Password is not correct!!", null)))
       }
     )
   }

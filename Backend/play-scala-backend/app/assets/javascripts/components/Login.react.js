@@ -22,16 +22,29 @@ var Login = React.createClass({
 
     },
     _onResponse: function () {
+        var response = AccountApiRequest.getResponse();
+        var classAlert = "error";
+
+        if (response['function'] == 'login') {
+            if (response['success'] == 1) {
+                this.props.history.push('/dashboard');
+            }
+            else
+                this.showLoginError(response['message'], classAlert);
+        }
 
     },
     loginClicked: function () {
         var userName = document.getElementById('userName').value;
         var passWord = document.getElementById('passWord').value;
 
-
+        var login = {};
+        login ["employeeID"] = userName;
+        login ["employeePassword"] = passWord;
+        AccountApiRequest.login(JSON.stringify(login));
     },
-    showLoginError: function () {
-        var element = <p className="error">Error</p>;
+    showLoginError: function (message, classAlert) {
+        var element = <p className={classAlert}>{message}   </p>;
         this.setState({loginErrorAlert: element})
     },
     render: function () {
@@ -44,8 +57,8 @@ var Login = React.createClass({
                         <br/>
                         {this.state.loginErrorAlert}
                         <br/>
-                        <input id="userName" type="text" placeholder="Username"/>
-                        <input  id="passWord" type="password" placeholder="Password"/>
+                        <input id="userName" type="text" placeholder="Username" required/>
+                        <input id="passWord" type="password" placeholder="Password" required/>
                         <button type="submit">login</button>
                     </form>
                 </div>

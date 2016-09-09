@@ -19,7 +19,7 @@ var ReactDOM = require('react-dom');
 ReactDOM.render((
 	  	<Router history={hashHistory}>
 		    <Route path="/" component={Main}>
-		    	<IndexRoute component={Home}/>
+		    	<IndexRoute component={Login}/>
 				<Route path="/login" component={Login}/>
 				<Route path="/dashboard" component={Dashboard}/>
 				<Route path="/userProfile" component={UserProfile}/>

@@ -15,7 +15,7 @@ object AttendanceDAO {
   }
 
   def getAttendanceToCheckInCheckout(employeeID: String, managerEmployeeID: String): Attendance = {
-    var item = DBManager.run(attendances.filter(_.employeeID === employeeID).filter(_.finish === false).filter(_.managerEmployeeID === managerEmployeeID).result.headOption)
+    val item = DBManager.run(attendances.filter(_.employeeID === employeeID).filter(_.finish === false).filter(_.managerEmployeeID === managerEmployeeID).result.headOption)
     item match {
       case Some(f) =>
         return item.get
@@ -25,7 +25,7 @@ object AttendanceDAO {
   }
 
   def saveArrivalTime(attendance: Attendance): Boolean = {
-    var item = getAttendanceToCheckInCheckout(attendance.employeeID, attendance.managerEmployeeID)
+    val item = getAttendanceToCheckInCheckout(attendance.employeeID, attendance.managerEmployeeID)
     if (item == null) {
       DBManager.run((attendances returning attendances.map(_.id)).insertOrUpdate(attendance))
       return true
@@ -34,7 +34,7 @@ object AttendanceDAO {
   }
 
   def saveDepartureTime(attendance: Attendance): Boolean = {
-    var item = getAttendanceToCheckInCheckout(attendance.employeeID, attendance.managerEmployeeID)
+    val item = getAttendanceToCheckInCheckout(attendance.employeeID, attendance.managerEmployeeID)
     if (item != null) {
       val q = for {c <- attendances if c.employeeID === attendance.employeeID if c.managerEmployeeID === attendance.managerEmployeeID} yield (c.departureTime, c.finish)
       val updateAction = q.update(attendance.departureTime, attendance.finish)
@@ -45,8 +45,8 @@ object AttendanceDAO {
   }
 
   def getAttendanceListByManager(employeeID: String): Seq[Attendance] = {
-    var query = attendances.filter(_.managerEmployeeID === employeeID).result
-    var result = DBManager.run(query)
+    val query = attendances.filter(_.managerEmployeeID === employeeID).result
+    val result = DBManager.run(query)
     return result
   }
 }

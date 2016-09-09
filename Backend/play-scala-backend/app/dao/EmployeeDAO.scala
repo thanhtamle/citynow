@@ -26,7 +26,7 @@ object EmployeeDAO {
   }
 
   def isExistEmployee(employeeID: String): Employee = {
-    var item = DBManager.run(employees.filter(_.employeeID === employeeID).result.headOption)
+    val item = DBManager.run(employees.filter(_.employeeID === employeeID).result.headOption)
     item match {
       case Some(f) =>
         return item.get
@@ -40,7 +40,7 @@ object EmployeeDAO {
   }
 
   def login(loginModel: LoginModel): Employee = {
-    var item = DBManager.run(employees.filter(_.employeeID === loginModel.employeeID).filter(_.employeePassword === loginModel.employeePassword).result.headOption)
+    val item = DBManager.run(employees.filter(_.employeeID === loginModel.employeeID).filter(_.employeePassword === loginModel.employeePassword).result.headOption)
     item match {
       case Some(f) =>
         return item.get

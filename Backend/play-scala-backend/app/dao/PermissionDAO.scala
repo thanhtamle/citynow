@@ -37,7 +37,7 @@ object PermissionDAO {
   }
 
   def isExistPermission(employeeID: String): Permission = {
-    var item = DBManager.run(permissions.filter(_.employeeID === employeeID).result.headOption)
+    val item = DBManager.run(permissions.filter(_.employeeID === employeeID).result.headOption)
     item match {
       case Some(f) =>
         return item.get
@@ -47,7 +47,7 @@ object PermissionDAO {
   }
 
   def getPermissionByEmployeeID(employeeID: String): Permission = {
-    var item = DBManager.run(permissions.filter(_.employeeID === employeeID).result.headOption)
+    val item = DBManager.run(permissions.filter(_.employeeID === employeeID).result.headOption)
     item match {
       case Some(f) =>
         return item.get
