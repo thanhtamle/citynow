@@ -3,14 +3,14 @@ GET     /javascriptRoutes                       controllers.HomeController.javas
 
 GET     /assets/*file                           controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /employees                              controllers.EmployeeController.employees
-POST    /employees                              controllers.EmployeeController.register
-POST    /employees/:id/delete                   controllers.EmployeeController.deleteEmployee(id: Long)
-GET     /getEmployee/:employeeID                controllers.EmployeeController.getEmployee(employeeID: String)
+GET     /getAllAccountList                      controllers.AccountController.getAllAccountList
+POST    /employees                              controllers.AccountController.register
+POST    /employees/:id/delete                   controllers.AccountController.deleteEmployee(id: Long)
+GET     /getAccount/:accountID                  controllers.AccountController.getAccount(accountID: String)
 
 
-POST    /login                                  controllers.EmployeeController.login
-POST    /register                               controllers.EmployeeController.register
+POST    /login                                  controllers.AccountController.login
+POST    /register                               controllers.AccountController.register
 
 
 GET     /attendances                            controllers.AttendanceController.attendances
