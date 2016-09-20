@@ -47,11 +47,6 @@
 		FC86F0D81D317840005C2808 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0D71D317840005C2808 /* ApiRequest.swift */; };
 		FC86F0DA1D322E56005C2808 /* LoginApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0D91D322E56005C2808 /* LoginApiRequest.swift */; };
 		FC86F0DD1D324567005C2808 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0DC1D324567005C2808 /* LoginModel.swift */; };
-		FC86F0E01D32863E005C2808 /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0DF1D32863E005C2808 /* HTTPSecurity.swift */; };
-		FC86F0E21D328645005C2808 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0E11D328645005C2808 /* Operation.swift */; };
-		FC86F0E41D32864B005C2808 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0E31D32864B005C2808 /* Request.swift */; };
-		FC86F0E61D32864F005C2808 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0E51D32864F005C2808 /* StatusCode.swift */; };
-		FC86F0E91D32867A005C2808 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0E81D32867A005C2808 /* Upload.swift */; };
 		FC86F0ED1D32921D005C2808 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0EB1D32921D005C2808 /* FrameView.swift */; };
 		FC86F0EE1D32921D005C2808 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0EC1D32921D005C2808 /* HUD.swift */; };
 		FC86F0FE1D329226005C2808 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86F0F01D329226005C2808 /* PKHUD.swift */; };
@@ -158,12 +153,6 @@
 		FC86F0D71D317840005C2808 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		FC86F0D91D322E56005C2808 /* LoginApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginApiRequest.swift; sourceTree = "<group>"; };
 		FC86F0DC1D324567005C2808 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		FC86F0DF1D32863E005C2808 /* HTTPSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSecurity.swift; sourceTree = "<group>"; };
-		FC86F0E11D328645005C2808 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
-		FC86F0E31D32864B005C2808 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		FC86F0E51D32864F005C2808 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
-		FC86F0E71D328654005C2808 /* SwiftHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftHTTP.h; sourceTree = "<group>"; };
-		FC86F0E81D32867A005C2808 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		FC86F0EB1D32921D005C2808 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		FC86F0EC1D32921D005C2808 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		FC86F0EF1D329226005C2808 /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
@@ -319,7 +308,6 @@
 				FC86F1151D33C3B5005C2808 /* DialogView */,
 				FC86F1101D33A4E3005C2808 /* SCLAlertView */,
 				FC86F0EA1D329125005C2808 /* PKHUB */,
-				FC86F0DE1D3283CB005C2808 /* SwiftHTTP */,
 				FC1CB7371D2819B500C0AAA7 /* SlideMenuController.swift */,
 				862396A21D1E94C800AC25AC /* SWRevealViewController */,
 			);
@@ -421,19 +409,6 @@
 				FC86F0D91D322E56005C2808 /* LoginApiRequest.swift */,
 			);
 			name = Login;
-			sourceTree = "<group>";
-		};
-		FC86F0DE1D3283CB005C2808 /* SwiftHTTP */ = {
-			isa = PBXGroup;
-			children = (
-				FC86F0E81D32867A005C2808 /* Upload.swift */,
-				FC86F0DF1D32863E005C2808 /* HTTPSecurity.swift */,
-				FC86F0E11D328645005C2808 /* Operation.swift */,
-				FC86F0E31D32864B005C2808 /* Request.swift */,
-				FC86F0E51D32864F005C2808 /* StatusCode.swift */,
-				FC86F0E71D328654005C2808 /* SwiftHTTP.h */,
-			);
-			name = SwiftHTTP;
 			sourceTree = "<group>";
 		};
 		FC86F0EA1D329125005C2808 /* PKHUB */ = {
@@ -600,9 +575,11 @@
 					86191CFA1D1DAA040035C230 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = HQ7CXJ2V7K;
+						LastSwiftMigration = 0800;
 					};
 					86191D121D1DAA040035C230 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 86191CFA1D1DAA040035C230;
 					};
 				};
@@ -672,7 +649,6 @@
 				FC86F1281D33C72F005C2808 /* ConstraintAttributes.swift in Sources */,
 				FC12AD8B1D24E0E600E53AEC /* Constants.swift in Sources */,
 				FC86F1291D33C72F005C2808 /* ConstraintDescription.swift in Sources */,
-				FC86F0E01D32863E005C2808 /* HTTPSecurity.swift in Sources */,
 				FCEF7D331D30010A00FDD823 /* AboutViewController.swift in Sources */,
 				FC86F0DA1D322E56005C2808 /* LoginApiRequest.swift in Sources */,
 				FC1CB73F1D2837D100C0AAA7 /* UIImageView.swift in Sources */,
@@ -680,7 +656,6 @@
 				FC86F12E1D33C72F005C2808 /* EdgeInsets.swift in Sources */,
 				FCBB12F71D36FCD900C23901 /* CheckinApiRequest.swift in Sources */,
 				FC1CB73B1D28375900C0AAA7 /* ImageHeaderView.swift in Sources */,
-				FC86F0E91D32867A005C2808 /* Upload.swift in Sources */,
 				FC86F1051D329226005C2808 /* PKHUDSquareBaseView.swift in Sources */,
 				FC2372B41D3684B20068E741 /* GetAttendanceManagerApiRequest.swift in Sources */,
 				FC9ECE651D37661E003A5E15 /* UpdateRequestPermissionApiRequest.swift in Sources */,
@@ -690,7 +665,6 @@
 				FC86F1001D329226005C2808 /* PKHUDAnimation.swift in Sources */,
 				FC86F1071D329226005C2808 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				FC86F12B1D33C72F005C2808 /* ConstraintMaker.swift in Sources */,
-				FC86F0E21D328645005C2808 /* Operation.swift in Sources */,
 				FC33B8D61D2C372600265D0A /* UIApplication.swift in Sources */,
 				86191D011D1DAA040035C230 /* AppDelegate.swift in Sources */,
 				FC86F1081D329226005C2808 /* PKHUDTextView.swift in Sources */,
@@ -698,7 +672,6 @@
 				FC9ECE611D371FE9003A5E15 /* Localize.swift in Sources */,
 				FC86F1301D33C72F005C2808 /* SnapKit.swift in Sources */,
 				FC86F1191D33C685005C2808 /* DialogView.swift in Sources */,
-				FC86F0E41D32864B005C2808 /* Request.swift in Sources */,
 				FC2372AD1D366C180068E741 /* AttendanceCell.swift in Sources */,
 				FC86F0D51D3150F6005C2808 /* SettingsManager.swift in Sources */,
 				FC8A54251D2E4A9300C7FCAC /* ConfirmViewController.swift in Sources */,
@@ -712,7 +685,6 @@
 				FC86F1061D329226005C2808 /* PKHUDSuccessView.swift in Sources */,
 				FC86F1021D329226005C2808 /* PKHUDErrorView.swift in Sources */,
 				FC9ECE5B1D3718DB003A5E15 /* RequestPermissionApiRequest.swift in Sources */,
-				FC86F0E61D32864F005C2808 /* StatusCode.swift in Sources */,
 				FC7A50A91D36D94C00F77A25 /* PermissionModel.swift in Sources */,
 				FC1CB7431D2874FA00C0AAA7 /* UIView.swift in Sources */,
 				FC86F1131D33A4F2005C2808 /* SCLAlertView.swift in Sources */,
@@ -885,6 +857,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -901,6 +874,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -919,6 +893,7 @@
 				INFOPLIST_FILE = DemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Debug;
@@ -934,6 +909,7 @@
 				INFOPLIST_FILE = DemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Release;

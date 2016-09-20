@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject._
 
-import dao.{EmployeeDAO, PermissionDAO}
+import dao.{AccountDAO, PermissionDAO}
 import models._
 import play.api.libs.json.{JsError, Json}
 import play.api.mvc._
@@ -19,7 +19,7 @@ class PermissionController @Inject() extends Controller {
         BadRequest(Json.obj("status" -> "Error", "message" -> JsError.toFlatJson(errors)))
       },
       permission => {
-        if (PermissionDAO.addPermission(permission) == true)
+        if (PermissionDAO.addPermission(permission))
           Ok(Json.toJson(permission))
         else
           BadRequest(Json.obj("status" -> "Error"))
@@ -35,7 +35,7 @@ class PermissionController @Inject() extends Controller {
       },
       permission => {
         PermissionDAO.update(permission.employeeID)
-        EmployeeDAO.updatePermission(permission.employeeID)
+        AccountDAO.updatePermission(permission.employeeID)
         Ok(Json.toJson(permission))
       }
     )

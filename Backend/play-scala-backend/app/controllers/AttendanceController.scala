@@ -11,8 +11,8 @@ import play.api.mvc._
 class AttendanceController @Inject() extends Controller {
   implicit val attendanceWrites = Json.writes[Attendance]
   implicit val attendanceReads = Json.reads[Attendance]
-  implicit val employeeWrites = Json.writes[Employee]
-  implicit val employeeReads = Json.reads[Employee]
+  implicit val employeeWrites = Json.writes[Account]
+  implicit val employeeReads = Json.reads[Account]
 
   //  def index = Action {
   //    Redirect(routes.AttendanceController.attendances)
@@ -29,7 +29,7 @@ class AttendanceController @Inject() extends Controller {
         BadRequest(Json.obj("status" -> "Error", "message" -> JsError.toFlatJson(errors)))
       },
       attendance => {
-        if (AttendanceDAO.saveArrivalTime(attendance) == true)
+        if (AttendanceDAO.saveArrivalTime(attendance))
           Ok(Json.toJson(attendance))
         else
           BadRequest(Json.obj("status" -> "Error"))
@@ -44,7 +44,7 @@ class AttendanceController @Inject() extends Controller {
         BadRequest(Json.obj("status" -> "Error", "message" -> JsError.toFlatJson(errors)))
       },
       attendance => {
-        if (AttendanceDAO.saveDepartureTime(attendance) == true)
+        if (AttendanceDAO.saveDepartureTime(attendance))
           Ok(Json.toJson(attendance))
         else
           BadRequest(Json.obj("status" -> "Error"))

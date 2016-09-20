@@ -1,6 +1,6 @@
 var React = require('react');
 var Modal = require('react-bootstrap').Modal;
-var EmployeeApiRequest = require('../apiRequest/EmployeeApiRequest');
+var EmployeeApiRequest = require('../apiRequest/AccountApiRequest');
 var AttendanceApiRequest = require('../apiRequest/AttendanceApiRequest');
 var PermissionApiRequest = require('../apiRequest/PermissionApiRequest');
 

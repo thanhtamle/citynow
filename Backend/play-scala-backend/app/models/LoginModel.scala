@@ -1,3 +1,3 @@
 package models
 
-case class LoginModel(employeeID: String, employeePassword: String)
+case class LoginModel(accountID: String, accountPassword: String)
