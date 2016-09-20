@@ -17,8 +17,8 @@ class HomeController @Inject()(actorSystem: ActorSystem, ws: WSClient) extends C
   def javascriptRoutes = Action { implicit request =>
     Ok(
       JavaScriptReverseRouter("jsRoutes")(
-        routes.javascript.EmployeeController.employees,
-        routes.javascript.EmployeeController.login,
+        routes.javascript.AccountController.getAllAccountList,
+        routes.javascript.AccountController.login,
         routes.javascript.AttendanceController.attendances,
         routes.javascript.PermissionController.getAllRequestPermission
       )

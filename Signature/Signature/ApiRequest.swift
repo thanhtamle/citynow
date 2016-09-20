@@ -10,60 +10,60 @@ import UIKit
 
 class ApiRequest {
     
-    private let API_HOST = "https://gifstar.me"
-    private var token: String!
+    fileprivate let API_HOST = "https://gifstar.me"
+    fileprivate var token: String!
     
     func getLoadingMessage () -> String { return ""}
     func getRequestUrl () -> String { return ""}
     func getContentType () -> String { return ""}
     func getRequestType () -> String { return ""}
-    func resultReceiver (response: String) -> AnyObject? { return nil}
+    func resultReceiver (_ response: String) -> AnyObject? { return nil}
     func isOpenProgressBar () -> Bool {return false}
-    func setToken(token: String) {}
+    func setToken(_ token: String) {}
     
     func getFullRequestLink() -> String {
         return API_HOST + getRequestUrl()
     }
     
-    private func dataTask(request: NSMutableURLRequest, completion: (success: Bool, object: AnyObject?) -> ()) {
-        request.HTTPMethod = getRequestType()
+    fileprivate func dataTask(_ request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
+        request.httpMethod = getRequestType()
         
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+        session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if let data = data {
-                let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
+                let json = try? JSONSerialization.jsonObject(with: data, options: [])
                 
                 if(json == nil) {
-                    let a = String(data: data, encoding: NSUTF8StringEncoding)! as String
+                    let a = String(data: data, encoding: String.Encoding.utf8)! as String
                     let tam = a
                     print(tam)
                 }
                 
-                if let response = response as? NSHTTPURLResponse where 200...299 ~= response.statusCode {
-                    completion(success: true, object: json)
+                if let response = response as? HTTPURLResponse , 200...299 ~= response.statusCode {
+                    completion(true, json as AnyObject?)
                 } else {
-                    completion(success: false, object: json)
+                    completion(false, json as AnyObject?)
                 }
-                HUD.hide()
+                //HUD.hide()
             }
-            }.resume()
+            }) .resume()
     }
     
-    func request(request: NSMutableURLRequest, completion: (success: Bool, object: AnyObject?) -> ()) {
+    func request(_ request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
         dataTask(request, completion: completion)
     }
     
-    func clientURLRequest(params: Dictionary<String, AnyObject>? = nil) -> NSMutableURLRequest {
-        HUD.show(.Progress)
-        let request = NSMutableURLRequest(URL: NSURL(string: getFullRequestLink())!)
+    func clientURLRequest(_ params: Dictionary<String, AnyObject>? = nil) -> NSMutableURLRequest {
+        ///HUD.show(.Progress)
+        let request = NSMutableURLRequest(url: URL(string: getFullRequestLink())!)
         if let params = params {
             
-            let data = try! NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions(rawValue: 0))
+            let data = try! JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions(rawValue: 0))
             
             request.addValue(getContentType(),forHTTPHeaderField: "Content-Type")
             request.addValue(getContentType(),forHTTPHeaderField: "Accept")
-            request.HTTPBody = data
+            request.httpBody = data
         }
         
         if let token = token {

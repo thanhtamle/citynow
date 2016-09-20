@@ -1,6 +1,10 @@
 var React = require('react');
 var Link = require('react-router').Link;
 
+window.onhashchange = function() {
+
+    window.history.go()
+}
 
 var Notification = React.createClass({
 

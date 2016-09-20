@@ -32,7 +32,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var opacity: CGFloat = 1.0
     var swiped = false
     
-    var color = UIColor.blackColor()
+    var color = UIColor.black
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +42,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         colorBtn.backgroundColor = UIColor(hexString: MAIN_COLOR)
         sizeBtn.backgroundColor = UIColor(hexString: MAIN_COLOR)
         
-        abstractView.backgroundColor = UIColor.blackColor()
+        abstractView.backgroundColor = UIColor.black
         abstractView.alpha = 0.4
         
-        sizeDialog.backgroundColor = UIColor.whiteColor()
-        sizeDialog.layer.shadowColor = UIColor.blackColor().CGColor
+        sizeDialog.backgroundColor = UIColor.white
+        sizeDialog.layer.shadowColor = UIColor.black.cgColor
         sizeDialog.layer.shadowOpacity = 0.5
-        sizeDialog.layer.shadowOffset = CGSizeZero
+        sizeDialog.layer.shadowOffset = CGSize.zero
         sizeDialog.layer.shadowRadius = 5
         sizeDialog.layer.cornerRadius = 5
         
@@ -61,31 +61,31 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.didReceiveMemoryWarning()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 
-    @IBAction func clearSignatureClicked(sender: AnyObject) {
+    @IBAction func clearSignatureClicked(_ sender: AnyObject) {
         mainImageView.image = nil
     }
 
-    @IBAction func shareSignatureClicked(sender: AnyObject) {
+    @IBAction func shareSignatureClicked(_ sender: AnyObject) {
         UIGraphicsBeginImageContext(mainImageView.bounds.size)
         
-        let rect = CGRectMake(0, 0, mainImageView.frame.size.width, mainImageView.frame.size.height)
-        UIColor.whiteColor().setFill()
+        let rect = CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height)
+        UIColor.white.setFill()
         UIRectFill(rect)
-        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0,
+        mainImageView.image?.draw(in: CGRect(x: 0, y: 0,
             width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        let imageData: NSData = UIImagePNGRepresentation(image)!
-        let strBase64: String = imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        let imageData: Data = UIImagePNGRepresentation(image!)!
+        let strBase64: String = imageData.base64EncodedString(options: .lineLength64Characters)
         
         var postBase64: String = "image/png;base64,"
-        postBase64 = postBase64.stringByAppendingString(strBase64)
+        postBase64 = postBase64 + strBase64
         
         let uploadImageApiRequest = UploadImageApiRequest()
         uploadImageApiRequest.upload(postBase64) { (success, data, message) in
@@ -98,57 +98,57 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
-    @IBAction func sliderBrushChanged(sender: UISlider) {
+    @IBAction func sliderBrushChanged(_ sender: UISlider) {
         brushWidth = CGFloat(sender.value)
 
     }
     
-    @IBAction func sizeClicked(sender: AnyObject) {
-        abstractView.hidden = false
-        sizeDialog.hidden = false
+    @IBAction func sizeClicked(_ sender: AnyObject) {
+        abstractView.isHidden = false
+        sizeDialog.isHidden = false
         lockDraw = true
     }
     
-    @IBAction func closeSizeDialogClicked(sender: AnyObject) {
-        abstractView.hidden = true
-        sizeDialog.hidden = true
+    @IBAction func closeSizeDialogClicked(_ sender: AnyObject) {
+        abstractView.isHidden = true
+        sizeDialog.isHidden = true
         lockDraw = false
     }
     
-    @IBAction func colorClicked(sender: AnyObject) {
+    @IBAction func colorClicked(_ sender: AnyObject) {
         self.showColorPicker()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if(lockDraw == true) {
             return
         }
         
         swiped = false
         if let touch = touches.first {
-            lastPoint = touch.locationInView(self.view)
+            lastPoint = touch.location(in: self.view)
         }
     }
     
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+    func drawLineFrom(_ fromPoint: CGPoint, toPoint: CGPoint) {
         // 1
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         
         // 2
-        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        context?.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
+        context?.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
         
         // 3
-        CGContextSetLineCap(context, CGLineCap.Round)
-        CGContextSetLineWidth(context, brushWidth)
-        CGContextSetStrokeColorWithColor(context, color.CGColor)
+        context?.setLineCap(CGLineCap.round)
+        context?.setLineWidth(brushWidth)
+        context?.setStrokeColor(color.cgColor)
 //        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
-        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        context?.setBlendMode(CGBlendMode.normal)
         
         // 4
-        CGContextStrokePath(context)
+        context?.strokePath()
         
         // 5
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -157,7 +157,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if(lockDraw == true) {
             return
         }
@@ -165,7 +165,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         // 6
         swiped = true
         if let touch = touches.first  {
-            let currentPoint = touch.locationInView(view)
+            let currentPoint = touch.location(in: view)
             drawLineFrom(lastPoint, toPoint: currentPoint)
             
             // 7
@@ -173,7 +173,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if(lockDraw == true) {
             return
         }
@@ -185,22 +185,22 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         // Merge tempImageView into mainImageView
         UIGraphicsBeginImageContext(mainImageView.frame.size)
-        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
+        mainImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: 1.0)
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         tempImageView.image = nil
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         
         // show popover box for iPhone and iPad both
-        return UIModalPresentationStyle.None
+        return UIModalPresentationStyle.none
     }
 
     // called by color picker after color selected.
-    func colorPickerDidColorSelected(selectedUIColor selectedUIColor: UIColor, selectedHexColor: String) {
+    func colorPickerDidColorSelected(selectedUIColor: UIColor, selectedHexColor: String) {
         red = selectedUIColor.coreImageColor.red
         green = selectedUIColor.coreImageColor.green
         blue = selectedUIColor.coreImageColor.blue
@@ -209,16 +209,16 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     
     // show color picker from UIButton
-    private func showColorPicker(){
+    fileprivate func showColorPicker(){
         
         // initialise color picker view controller
-        let colorPickerVc = storyboard?.instantiateViewControllerWithIdentifier("sbColorPicker") as! ColorPickerViewController
+        let colorPickerVc = storyboard?.instantiateViewController(withIdentifier: "sbColorPicker") as! ColorPickerViewController
         
         // set modal presentation style
-        colorPickerVc.modalPresentationStyle = .Popover
+        colorPickerVc.modalPresentationStyle = .popover
         
         // set max. size
-        colorPickerVc.preferredContentSize = CGSizeMake(265, 400)
+        colorPickerVc.preferredContentSize = CGSize(width: 265, height: 400)
         
         // set color picker deleagate to current view controller
         // must write delegate method to handle selected color
@@ -234,14 +234,14 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             popoverController.sourceRect = self.colorBtn.frame
             
             // show popover arrow at feasible direction
-            popoverController.permittedArrowDirections = UIPopoverArrowDirection.Any
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection.any
             
             // set popover delegate self
             popoverController.delegate = self
         }
         
         //show color popover
-        presentViewController(colorPickerVc, animated: true, completion: nil)
+        present(colorPickerVc, animated: true, completion: nil)
     }
 
 

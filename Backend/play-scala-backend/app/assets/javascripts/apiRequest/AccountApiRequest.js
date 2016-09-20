@@ -42,14 +42,15 @@ var EmployeeApiRequest = assign({}, EventEmitter.prototype, {
             cache: false,
             contentType: "application/json; charset=utf-8",
             success: function (data) {
-                data['function'] = 'registerDepartment';
+                data['function'] = 'login';
+                data['message'] = 'Login successfully!';
                 _response = data;
                 this.emitResponse();
             }.bind(this),
             error: function (xhr, status, err) {
                 var data = {};
-                data['function'] = 'registerDepartment';
-                data['message'] = 'Register department error!';
+                data['function'] = 'login';
+                data['message'] = 'Login error!';
                 _response = data;
                 this.emitResponse();
             }.bind(this)

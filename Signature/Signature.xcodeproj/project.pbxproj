@@ -14,22 +14,6 @@
 		8257A0B31D75908F00057A07 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257A0B11D75908F00057A07 /* UIColor+Addition.swift */; };
 		8257A0B51D75917300057A07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257A0B41D75917300057A07 /* MainViewController.swift */; };
 		82DE5C641D8108EF006E8247 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C631D8108EF006E8247 /* ApiRequest.swift */; };
-		82DE5C781D810986006E8247 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C671D810986006E8247 /* FrameView.swift */; };
-		82DE5C791D810986006E8247 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C681D810986006E8247 /* HUD.swift */; };
-		82DE5C7A1D810986006E8247 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C6A1D810986006E8247 /* PKHUD.swift */; };
-		82DE5C7B1D810986006E8247 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C6B1D810986006E8247 /* PKHUDAnimating.swift */; };
-		82DE5C7C1D810986006E8247 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C6C1D810986006E8247 /* PKHUDAnimation.swift */; };
-		82DE5C7D1D810986006E8247 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C6D1D810986006E8247 /* PKHUDAssets.swift */; };
-		82DE5C7E1D810986006E8247 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C6E1D810986006E8247 /* PKHUDErrorView.swift */; };
-		82DE5C7F1D810986006E8247 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C6F1D810986006E8247 /* PKHUDProgressView.swift */; };
-		82DE5C801D810986006E8247 /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C701D810986006E8247 /* PKHUDRotatingImageView.swift */; };
-		82DE5C811D810986006E8247 /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C711D810986006E8247 /* PKHUDSquareBaseView.swift */; };
-		82DE5C821D810986006E8247 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C721D810986006E8247 /* PKHUDSuccessView.swift */; };
-		82DE5C831D810986006E8247 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C731D810986006E8247 /* PKHUDSystemActivityIndicatorView.swift */; };
-		82DE5C841D810986006E8247 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C741D810986006E8247 /* PKHUDTextView.swift */; };
-		82DE5C851D810986006E8247 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C751D810986006E8247 /* PKHUDWideBaseView.swift */; };
-		82DE5C861D810986006E8247 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C761D810986006E8247 /* Window.swift */; };
-		82DE5C871D810986006E8247 /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C771D810986006E8247 /* WindowRootViewController.swift */; };
 		82DE5C891D810A18006E8247 /* UploadImageApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C881D810A18006E8247 /* UploadImageApiRequest.swift */; };
 		82DE5C8C1D811168006E8247 /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C8B1D811168006E8247 /* UploadImageModel.swift */; };
 		82E9DC0F1D714A3A00EC8281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DC0E1D714A3A00EC8281 /* AppDelegate.swift */; };
@@ -66,23 +50,6 @@
 		8257A0B11D75908F00057A07 /* UIColor+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		8257A0B41D75917300057A07 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		82DE5C631D8108EF006E8247 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
-		82DE5C671D810986006E8247 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
-		82DE5C681D810986006E8247 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
-		82DE5C691D810986006E8247 /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
-		82DE5C6A1D810986006E8247 /* PKHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUD.swift; sourceTree = "<group>"; };
-		82DE5C6B1D810986006E8247 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimating.swift; sourceTree = "<group>"; };
-		82DE5C6C1D810986006E8247 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimation.swift; sourceTree = "<group>"; };
-		82DE5C6D1D810986006E8247 /* PKHUDAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAssets.swift; sourceTree = "<group>"; };
-		82DE5C6E1D810986006E8247 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDErrorView.swift; sourceTree = "<group>"; };
-		82DE5C6F1D810986006E8247 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDProgressView.swift; sourceTree = "<group>"; };
-		82DE5C701D810986006E8247 /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
-		82DE5C711D810986006E8247 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
-		82DE5C721D810986006E8247 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSuccessView.swift; sourceTree = "<group>"; };
-		82DE5C731D810986006E8247 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
-		82DE5C741D810986006E8247 /* PKHUDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDTextView.swift; sourceTree = "<group>"; };
-		82DE5C751D810986006E8247 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDWideBaseView.swift; sourceTree = "<group>"; };
-		82DE5C761D810986006E8247 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
-		82DE5C771D810986006E8247 /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
 		82DE5C881D810A18006E8247 /* UploadImageApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageApiRequest.swift; sourceTree = "<group>"; };
 		82DE5C8B1D811168006E8247 /* UploadImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
 		82E9DC0B1D714A3A00EC8281 /* Signature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signature.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,33 +122,8 @@
 		82DE5C651D810939006E8247 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				82DE5C661D81096D006E8247 /* PKHUB */,
 			);
 			name = Libraries;
-			sourceTree = "<group>";
-		};
-		82DE5C661D81096D006E8247 /* PKHUB */ = {
-			isa = PBXGroup;
-			children = (
-				82DE5C671D810986006E8247 /* FrameView.swift */,
-				82DE5C681D810986006E8247 /* HUD.swift */,
-				82DE5C691D810986006E8247 /* PKHUD.h */,
-				82DE5C6A1D810986006E8247 /* PKHUD.swift */,
-				82DE5C6B1D810986006E8247 /* PKHUDAnimating.swift */,
-				82DE5C6C1D810986006E8247 /* PKHUDAnimation.swift */,
-				82DE5C6D1D810986006E8247 /* PKHUDAssets.swift */,
-				82DE5C6E1D810986006E8247 /* PKHUDErrorView.swift */,
-				82DE5C6F1D810986006E8247 /* PKHUDProgressView.swift */,
-				82DE5C701D810986006E8247 /* PKHUDRotatingImageView.swift */,
-				82DE5C711D810986006E8247 /* PKHUDSquareBaseView.swift */,
-				82DE5C721D810986006E8247 /* PKHUDSuccessView.swift */,
-				82DE5C731D810986006E8247 /* PKHUDSystemActivityIndicatorView.swift */,
-				82DE5C741D810986006E8247 /* PKHUDTextView.swift */,
-				82DE5C751D810986006E8247 /* PKHUDWideBaseView.swift */,
-				82DE5C761D810986006E8247 /* Window.swift */,
-				82DE5C771D810986006E8247 /* WindowRootViewController.swift */,
-			);
-			name = PKHUB;
 			sourceTree = "<group>";
 		};
 		82DE5C8A1D811151006E8247 /* Models */ = {
@@ -326,13 +268,17 @@
 				TargetAttributes = {
 					82E9DC0A1D714A3A00EC8281 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HQ7CXJ2V7K;
+						LastSwiftMigration = 0800;
 					};
 					82E9DC211D714A3A00EC8281 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 82E9DC0A1D714A3A00EC8281;
 					};
 					82E9DC2C1D714A3A00EC8281 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 82E9DC0A1D714A3A00EC8281;
 					};
 				};
@@ -392,30 +338,14 @@
 			files = (
 				82E9DC0F1D714A3A00EC8281 /* AppDelegate.swift in Sources */,
 				82DE5C891D810A18006E8247 /* UploadImageApiRequest.swift in Sources */,
-				82DE5C791D810986006E8247 /* HUD.swift in Sources */,
-				82DE5C801D810986006E8247 /* PKHUDRotatingImageView.swift in Sources */,
-				82DE5C821D810986006E8247 /* PKHUDSuccessView.swift in Sources */,
-				82DE5C7A1D810986006E8247 /* PKHUD.swift in Sources */,
-				82DE5C861D810986006E8247 /* Window.swift in Sources */,
-				82DE5C7C1D810986006E8247 /* PKHUDAnimation.swift in Sources */,
 				822ED6481D76E8D1009A1F00 /* UIColor.swift in Sources */,
-				82DE5C831D810986006E8247 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				8257A0B31D75908F00057A07 /* UIColor+Addition.swift in Sources */,
-				82DE5C851D810986006E8247 /* PKHUDWideBaseView.swift in Sources */,
-				82DE5C781D810986006E8247 /* FrameView.swift in Sources */,
-				82DE5C841D810986006E8247 /* PKHUDTextView.swift in Sources */,
 				82DE5C8C1D811168006E8247 /* UploadImageModel.swift in Sources */,
 				822ED6431D76D196009A1F00 /* ColorPickerViewController.swift in Sources */,
-				82DE5C7B1D810986006E8247 /* PKHUDAnimating.swift in Sources */,
-				82DE5C7E1D810986006E8247 /* PKHUDErrorView.swift in Sources */,
 				8257A0B51D75917300057A07 /* MainViewController.swift in Sources */,
 				82E9DC171D714A3A00EC8281 /* Signature.xcdatamodeld in Sources */,
 				82DE5C641D8108EF006E8247 /* ApiRequest.swift in Sources */,
 				8257A0B21D75908F00057A07 /* Constants.swift in Sources */,
-				82DE5C871D810986006E8247 /* WindowRootViewController.swift in Sources */,
-				82DE5C7F1D810986006E8247 /* PKHUDProgressView.swift in Sources */,
-				82DE5C7D1D810986006E8247 /* PKHUDAssets.swift in Sources */,
-				82DE5C811D810986006E8247 /* PKHUDSquareBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,10 +489,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HQ7CXJ2V7K;
 				INFOPLIST_FILE = Signature/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = citynow.Signature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -570,10 +502,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HQ7CXJ2V7K;
 				INFOPLIST_FILE = Signature/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = citynow.Signature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -585,6 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = citynow.SignatureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signature.app/Signature";
 			};
 			name = Debug;
@@ -597,6 +532,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = citynow.SignatureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signature.app/Signature";
 			};
 			name = Release;
@@ -608,6 +544,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = citynow.SignatureUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Signature;
 			};
 			name = Debug;
@@ -619,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = citynow.SignatureUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Signature;
 			};
 			name = Release;

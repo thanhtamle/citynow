@@ -27,18 +27,18 @@ class UploadImageApiRequest: ApiRequest{
     }
     
 
-    func upload(base64: String, completion: (success: Bool, data: AnyObject?, message: String?) -> ()) {
+    func upload(_ base64: String, completion: @escaping (_ success: Bool, _ data: AnyObject?, _ message: String?) -> ()) {
         
         let uploadImageModel = ["data": base64]
 
-        request(clientURLRequest(uploadImageModel)) { (success, object) -> () in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        request(clientURLRequest(uploadImageModel as Dictionary<String, AnyObject>?)) { (success, object) -> () in
+            DispatchQueue.main.async(execute: { () -> Void in
                 if success {
                     let url = object
-                    completion(success: true, data: object, message: nil)
+                    completion(true, object, nil)
                 } else {
                     let message = "error"
-                    completion(success: false, data: nil, message: message)
+                    completion(false, nil, message)
                 }
             })
         }
