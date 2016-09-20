@@ -543,7 +543,7 @@ internal class ConstraintDescription: ConstraintDescriptionExtendable, Constrain
     
     private func addConstraint(attributes: ConstraintAttributes) -> ConstraintDescription {
         if self.relation == nil {
-            self.fromItem.attributes += attributes
+//            self.fromItem.attributes += attributes
         }
         return self
     }

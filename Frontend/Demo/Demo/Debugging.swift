@@ -116,7 +116,7 @@ private func descriptionForObject(object: AnyObject) -> String {
     let pointerDescription = NSString(format: "%p", ObjectIdentifier(object).uintValue)
     var desc = ""
     
-    desc += object.dynamicType.description()
+//    desc += type(of: )object.dynamicType.description()
     
     if let object = object as? View {
         desc += ":\(object.snp_label ?? pointerDescription)"
@@ -162,7 +162,7 @@ private extension NSLayoutAttribute {
         case .Height:               return "height"
         case .CenterX:              return "centerX"
         case .CenterY:              return "centerY"
-        case .Baseline:             return "baseline"
+        case .LastBaseline:             return "baseline"
         case .FirstBaseline:        return "firstBaseline"
         case .TopMargin:            return "topMargin"
         case .LeftMargin:           return "leftMargin"

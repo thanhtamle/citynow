@@ -12,7 +12,7 @@ extension UIImage {
     
     func trim(trimRect trimRect :CGRect) -> UIImage {
         if CGRectContainsRect(CGRect(origin: CGPointZero, size: self.size), trimRect) {
-            if let imageRef = CGImageCreateWithImageInRect(self.CGImage, trimRect) {
+            if let imageRef = CGImageCreateWithImageInRect(self.CGImage!, trimRect) {
                 return UIImage(CGImage: imageRef)
             }
         }

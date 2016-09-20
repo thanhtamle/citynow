@@ -130,7 +130,7 @@ internal struct ConstraintAttributes: OptionSetType, BooleanType {
             attrs.append(.CenterY)
         }
         if (self.contains(ConstraintAttributes.Baseline)) {
-            attrs.append(.Baseline)
+            attrs.append(.LastBaseline)
         }
         
         #if os(iOS) || os(tvOS)
@@ -171,12 +171,12 @@ internal struct ConstraintAttributes: OptionSetType, BooleanType {
         return attrs
     }
 }
-internal func +=(inout left: ConstraintAttributes, right: ConstraintAttributes) {
-    left.unionInPlace(right)
-}
-internal func -=(inout left: ConstraintAttributes, right: ConstraintAttributes) {
-    left.subtractInPlace(right)
-}
+//internal func +=(inout left: ConstraintAttributes, right: ConstraintAttributes) {
+//    left.unionInPlace(right)
+//}
+//internal func -=(inout left: ConstraintAttributes, right: ConstraintAttributes) {
+//    left.subtractInPlace(right)
+//}
 internal func ==(left: ConstraintAttributes, right: ConstraintAttributes) -> Bool {
     return left.rawValue == right.rawValue
 }
