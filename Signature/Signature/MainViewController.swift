@@ -88,6 +88,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         postBase64 = postBase64 + strBase64
         
         let uploadImageApiRequest = UploadImageApiRequest()
+        uploadImageApiRequest.view = self.view
         uploadImageApiRequest.upload(postBase64) { (success, data, message) in
             if success == true {
                 

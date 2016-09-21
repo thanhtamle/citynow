@@ -1,0 +1,21 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+
+target 'Signature' do
+use_frameworks!
+pod 'MBProgressHUD', :git => "https://github.com/jdg/MBProgressHUD.git"
+pod 'Fabric'
+pod 'Crashlytics' 
+ # Pods for Signature
+
+  target 'SignatureTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SignatureUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

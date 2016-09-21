@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ApiRequest {
     
-    fileprivate let API_HOST = "https://gifstar.me"
+    fileprivate let API_HOST = "http://192.168.1.10"
     fileprivate var token: String!
+    var view: UIView!
     
     func getLoadingMessage () -> String { return ""}
     func getRequestUrl () -> String { return ""}
@@ -46,6 +48,7 @@ class ApiRequest {
                     completion(false, json as AnyObject?)
                 }
                 //HUD.hide()
+                MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
             }
             }) .resume()
     }
@@ -55,7 +58,8 @@ class ApiRequest {
     }
     
     func clientURLRequest(_ params: Dictionary<String, AnyObject>? = nil) -> NSMutableURLRequest {
-        ///HUD.show(.Progress)
+        let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
         let request = NSMutableURLRequest(url: URL(string: getFullRequestLink())!)
         if let params = params {
             

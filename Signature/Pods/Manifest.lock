@@ -1,0 +1,28 @@
+PODS:
+  - Crashlytics (3.8.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.8)
+  - MBProgressHUD (1.0.0)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - MBProgressHUD (from `https://github.com/jdg/MBProgressHUD.git`)
+
+EXTERNAL SOURCES:
+  MBProgressHUD:
+    :git: https://github.com/jdg/MBProgressHUD.git
+
+CHECKOUT OPTIONS:
+  MBProgressHUD:
+    :commit: 6424bb843bd4d3bb7f0b77ce36a175ecae4fd803
+    :git: https://github.com/jdg/MBProgressHUD.git
+
+SPEC CHECKSUMS:
+  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+
+PODFILE CHECKSUM: afbea892551f7f52d6c7e7825ec2aa974656f7b6
+
+COCOAPODS: 1.0.1

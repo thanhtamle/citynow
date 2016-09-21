@@ -15,7 +15,7 @@ class UploadImageApiRequest: ApiRequest{
     }
     
     override func getRequestUrl() -> String {
-        return "/upload.php"
+        return "/api/test"
     }
     
     override func getContentType() -> String {
@@ -34,7 +34,7 @@ class UploadImageApiRequest: ApiRequest{
         request(clientURLRequest(uploadImageModel as Dictionary<String, AnyObject>?)) { (success, object) -> () in
             DispatchQueue.main.async(execute: { () -> Void in
                 if success {
-                    let url = object
+//                    let url = object
                     completion(true, object, nil)
                 } else {
                     let message = "error"
