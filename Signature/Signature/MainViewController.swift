@@ -16,7 +16,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var clearBtn: UIButton!
     @IBOutlet weak var colorBtn: UIButton!
     @IBOutlet weak var sizeBtn: UIButton!
-    @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var sizeDialog: UIView!
     @IBOutlet weak var abstractView: UIView!
     @IBOutlet weak var sliderBrush: UISlider!
@@ -69,12 +68,18 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         mainImageView.image = nil
     }
 
+    @IBAction func settingClicked(_ sender: AnyObject) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = mainStoryboard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        let nav = UINavigationController(rootViewController: loginViewController)
+        navigationController!.present(nav, animated: true, completion: nil)
+    }
     @IBAction func shareSignatureClicked(_ sender: AnyObject) {
         UIGraphicsBeginImageContext(mainImageView.bounds.size)
         
-        let rect = CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height)
-        UIColor.white.setFill()
-        UIRectFill(rect)
+//        let rect = CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height)
+//        UIColor.white.setFill()
+//        UIRectFill(rect)
         mainImageView.image?.draw(in: CGRect(x: 0, y: 0,
             width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
         

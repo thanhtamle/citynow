@@ -11,7 +11,7 @@ import MBProgressHUD
 
 class ApiRequest {
     
-    fileprivate let API_HOST = "http://192.168.1.10"
+    fileprivate let API_HOST = Global.ipMain
     fileprivate var token: String!
     var view: UIView!
     
@@ -24,7 +24,7 @@ class ApiRequest {
     func setToken(_ token: String) {}
     
     func getFullRequestLink() -> String {
-        return API_HOST + getRequestUrl()
+        return Global.ipMain + getRequestUrl()
     }
     
     fileprivate func dataTask(_ request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
@@ -48,7 +48,9 @@ class ApiRequest {
                     completion(false, json as AnyObject?)
                 }
                 //HUD.hide()
-                MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
+                DispatchQueue.main.async {
+                    MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
+                }
             }
             }) .resume()
     }

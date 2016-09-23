@@ -14,6 +14,8 @@
 		8257A0B21D75908F00057A07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257A0B01D75908F00057A07 /* Constants.swift */; };
 		8257A0B31D75908F00057A07 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257A0B11D75908F00057A07 /* UIColor+Addition.swift */; };
 		8257A0B51D75917300057A07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257A0B41D75917300057A07 /* MainViewController.swift */; };
+		82BBBB271D9533D100C8B3D7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBBB261D9533D100C8B3D7 /* SettingViewController.swift */; };
+		82BBBB291D9534E800C8B3D7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BBBB281D9534E800C8B3D7 /* Global.swift */; };
 		82DE5C641D8108EF006E8247 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C631D8108EF006E8247 /* ApiRequest.swift */; };
 		82DE5C891D810A18006E8247 /* UploadImageApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C881D810A18006E8247 /* UploadImageApiRequest.swift */; };
 		82DE5C8C1D811168006E8247 /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5C8B1D811168006E8247 /* UploadImageModel.swift */; };
@@ -55,6 +57,8 @@
 		8257A0B01D75908F00057A07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8257A0B11D75908F00057A07 /* UIColor+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		8257A0B41D75917300057A07 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		82BBBB261D9533D100C8B3D7 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		82BBBB281D9534E800C8B3D7 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		82DE5C631D8108EF006E8247 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		82DE5C881D810A18006E8247 /* UploadImageApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageApiRequest.swift; sourceTree = "<group>"; };
 		82DE5C8B1D811168006E8247 /* UploadImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				82DE5C631D8108EF006E8247 /* ApiRequest.swift */,
 				82DE5C881D810A18006E8247 /* UploadImageApiRequest.swift */,
+				82BBBB281D9534E800C8B3D7 /* Global.swift */,
 			);
 			name = ApiRequest;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				8257A0B41D75917300057A07 /* MainViewController.swift */,
+				82BBBB261D9533D100C8B3D7 /* SettingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -522,12 +528,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E9DC0F1D714A3A00EC8281 /* AppDelegate.swift in Sources */,
+				82BBBB271D9533D100C8B3D7 /* SettingViewController.swift in Sources */,
 				82DE5C891D810A18006E8247 /* UploadImageApiRequest.swift in Sources */,
 				822ED6481D76E8D1009A1F00 /* UIColor.swift in Sources */,
 				8257A0B31D75908F00057A07 /* UIColor+Addition.swift in Sources */,
 				82DE5C8C1D811168006E8247 /* UploadImageModel.swift in Sources */,
 				822ED6431D76D196009A1F00 /* ColorPickerViewController.swift in Sources */,
 				8257A0B51D75917300057A07 /* MainViewController.swift in Sources */,
+				82BBBB291D9534E800C8B3D7 /* Global.swift in Sources */,
 				82E9DC171D714A3A00EC8281 /* Signature.xcdatamodeld in Sources */,
 				82DE5C641D8108EF006E8247 /* ApiRequest.swift in Sources */,
 				8257A0B21D75908F00057A07 /* Constants.swift in Sources */,
