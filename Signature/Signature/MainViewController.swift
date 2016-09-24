@@ -65,6 +65,10 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
 
     @IBAction func clearSignatureClicked(_ sender: AnyObject) {
+        clear()
+    }
+    
+    func clear() {
         mainImageView.image = nil
     }
 
@@ -96,7 +100,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         uploadImageApiRequest.view = self.view
         uploadImageApiRequest.upload(postBase64) { (success, data, message) in
             if success == true {
-                
+                self.clear()
             }
             else {
                 
